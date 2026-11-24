@@ -43,9 +43,9 @@ Meskipun terlihat damai, Meowtopia juga memiliki berbagai kasus kejahatan digita
 
 Salah satu perusahaan teknologi terbesar di kota tersebut adalah **Pawbyte Technologies**, sebuah perusahaan yang mengembangkan produk dan layanan digital untuk masyarakat Meowtopia.
 
-Suatu hari, Pawbyte Technologies mengalami insiden kebocoran dokumen rahasia.
+Pawbyte Technologies menghadapi dua insiden digital: kebocoran dokumen rahasia dan penyalahgunaan akun perusahaan.
 
-Kasus tersebut kemudian diserahkan kepada seorang detektif terkenal bernama Detective Whiskers.
+Kedua kasus tersebut diserahkan kepada seorang detektif terkenal bernama Detective Whiskers.
 
 ### Detective Whiskers
 
@@ -72,6 +72,10 @@ Contoh dialog:
 ---
 
 ## 3. Latar Belakang Cerita
+
+Game terdiri dari dua kasus mandiri di Pawbyte Technologies. Kasus pertama memperkenalkan investigasi kebocoran dokumen; kasus kedua berfokus pada email palsu dan penyalahgunaan akun. Keduanya menggunakan PawOS dan mekanisme investigasi yang sama.
+
+### Case #001 — The Golden Tuna Heist
 
 Pawbyte Technologies baru saja menyelesaikan pengembangan sebuah dokumen rahasia bernama **Project Golden Tuna**.
 
@@ -220,6 +224,9 @@ Jika jawaban salah, pemain dapat kembali memeriksa bukti dan mencoba lagi.
                  |
                  v
             START GAME
+                 |
+                 v
+            SELECT CASE
                  |
                  v
            CASE BRIEFING
@@ -460,7 +467,7 @@ Menampilkan Detective Whiskers dengan latar ruang detektif.
 
 Pilihan:
 
-- Start Investigation
+- Start Investigation (pilih Case #001 atau Case #002)
 - Credits
 - Exit
 
@@ -515,6 +522,7 @@ Menampilkan Detective Whiskers dengan ekspresi berbeda berdasarkan hasil investi
 ### Fitur Utama
 
 - [ ] Main Menu
+- [ ] Case Selection (dua kasus)
 - [ ] Case Briefing
 - [ ] PawOS Virtual Desktop
 - [ ] PawFiles
@@ -568,7 +576,7 @@ Versi awal game berfokus pada:
 - Enam bukti digital.
 - Satu komputer investigasi virtual.
 - Lima aplikasi investigasi.
-- Satu jawaban benar.
+- Satu pelaku dan satu kombinasi bukti utama yang benar per kasus.
 - Sistem validasi sederhana.
 - Single-player.
 - Offline.
@@ -577,30 +585,47 @@ Pengembangan difokuskan pada pengalaman investigasi yang lengkap dari awal hingg
 
 ---
 
-## 16. Ide Kasus Tambahan
+## 16. Case #002 — The Phishy Fish
 
-### Case #002 — The Phishy Fish
+### Informasi Kasus
 
-Seekor kucing menerima email palsu yang menyebabkan akun perusahaan disalahgunakan.
+| Aspek | Deskripsi |
+|---|---|
+| Case ID | CASE-002 |
+| Case Name | The Phishy Fish |
+| Location | Pawbyte Technologies |
+| Difficulty | Medium |
+| Victim | Pawbyte Technologies dan Miss Mochi |
+| Incident | Penyalahgunaan akun perusahaan melalui email palsu |
 
-Pemain harus menelusuri email dan aktivitas login.
+### Deskripsi Kasus
 
-### Case #003 — Gone with the Paws
+Pada 20 Oktober 2026, akun Miss Mochi digunakan untuk mengakses daftar kontak perusahaan di luar jam kerja. Sebelumnya, ia menerima email yang tampak seperti pemberitahuan keamanan Pawbyte. Pemain harus memeriksa email, dokumen, dan log untuk membedakan pemilik akun yang tertipu dari pelaku yang menyalahgunakannya.
 
-Sebuah dokumen penting tiba-tiba hilang dari sistem.
+Kasus ini menggunakan Detective Whiskers, PawOS, dan alur pengumpulan bukti yang sama dengan Case #001. Ketiga tersangka memiliki profil dan aktivitas yang relevan dengan kasus ini:
 
-Pemain harus menyelidiki aktivitas penghapusan dan perubahan file.
+- **Miss Mochi — HR Officer:** Pemilik akun yang menerima email dan memasukkan kredensialnya; ia meninggalkan kantor pukul 18:00.
+- **Sir Purrcival — Finance Officer:** Meminta daftar kontak untuk pekerjaan resmi pada siang hari dan keluar pukul 17:30.
+- **Mr. Clawford — IT Administrator:** Memiliki akses administrasi dan membuat alamat layanan untuk pengujian.
 
-### Case #004 — The Midnight Meow
+### Bukti Kasus
 
-Aktivitas misterius terjadi pada komputer perusahaan setiap tengah malam.
+1. **Email palsu:** Email kepada Mochi meminta verifikasi segera melalui `pawbyte-security.example`, alamat yang berbeda dari domain resmi perusahaan.
+2. **Panduan keamanan:** Dokumen Pawbyte menyatakan bahwa alamat resmi menggunakan `pawbyte.example` dan staf IT tidak meminta kata sandi melalui email.
+3. **Access Log:** Akun Mochi login pukul 21:05 dari perangkat `CLAW-02`, lalu membuka daftar kontak pukul 21:08.
+4. **Device Register:** `CLAW-02` tercatat sebagai perangkat kerja Clawford.
+5. **Attendance Log:** Mochi dan Purrcival telah meninggalkan kantor sebelum login; Clawford masih bekerja malam itu.
+6. **MeowMail History:** Pesan pengujian menunjukkan Clawford membuat alamat `pawbyte-security.example` sebelum email palsu dikirim.
 
-Pemain harus mengidentifikasi sumber aktivitas tersebut.
+### Penyelesaian Kasus
 
-Kasus tambahan merupakan pengembangan opsional setelah kasus pertama selesai.
+> SPOILER — CASE #002
+
+**Pelaku:** Mr. Clawford. Mochi adalah korban phishing, meskipun akunnya digunakan dalam insiden.
+
+Bukti utama yang harus dipilih adalah **Email palsu**, **Access Log**, dan **Device Register**: email menjelaskan bagaimana kredensial diperoleh, sedangkan dua catatan menghubungkan penggunaan akun dengan perangkat Clawford. Panduan keamanan, catatan kehadiran, dan riwayat email memberikan konteks tambahan. Tuduhan salah memungkinkan pemain kembali memeriksa bukti dan mencoba lagi.
 
 ---
-
 ## 17. Credits
 
 Game menyediakan halaman Credits yang dapat diakses dari Main Menu.
